@@ -20,8 +20,6 @@ if [ -d "${RBENV_ROOT}" ]; then
   eval "$(rbenv init -)"
 fi
 
-# Export Github tokens
-export GITHUB_REPO_TOKEN="382ffc25bf9cfcbbdaa2d9d6c2f3d09fe52c1a56"
  #Add Homebrew to completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
