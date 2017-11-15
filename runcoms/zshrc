@@ -10,4 +10,22 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+## Powerline
+#source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# Start rbenv
+export RBENV_ROOT="${HOME}/.rbenv"
+if [ -d "${RBENV_ROOT}" ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+  eval "$(rbenv init -)"
+fi
+
+# Export Github tokens
+export GITHUB_REPO_TOKEN="382ffc25bf9cfcbbdaa2d9d6c2f3d09fe52c1a56"
+ #Add Homebrew to completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Aliases
+alias zshconfig="vim ~/.zshrc"
+alias gf='git diff-tree --no-commit-id --name-only -r'
+alias git=hub
